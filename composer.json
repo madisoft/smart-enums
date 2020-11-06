@@ -1,0 +1,45 @@
+{
+    "name": "madisoft/smart-enums",
+    "description": "",
+    "type": "library",
+    "license": "MIT",
+    "require": {
+        "php": "^7.3"
+    },
+    "require-dev": {
+        "doctrine/dbal": "^2.12",
+        "friendsofphp/php-cs-fixer": "^2.18",
+        "phpunit/phpunit": "^9.5",
+        "psalm/plugin-phpunit": "^0.15.1",
+        "symfony/form": "^4.4|^5.0",
+        "vimeo/psalm": "^4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Madisoft\\SmartEnums\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Madisoft\\SmartEnums\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "cs-fixer": "vendor/bin/php-cs-fixer fix",
+        "cs-fixer-validate": "vendor/bin/php-cs-fixer fix --show-progress=none --no-interaction --dry-run",
+        "static-analysis": "vendor/bin/psalm src"
+    },
+    "suggest": {
+        "symfony/form": "For integration with Symfony forms",
+        "doctrine/dbal": "For native support of enum as Doctrine data types"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.0-dev"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
